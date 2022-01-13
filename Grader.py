@@ -1,11 +1,13 @@
 
-# Welcome to my grade calculator aka Grader --------------------------
+# Welcome to my grade calculator aka Grader -
 
 # input from user for max marks
+
 tm = int(input("Enter the total marks possible in single subject out of 5 : "))
 mm = tm*5
 
 # input from user for marks scored subjectwise
+
 mat = int(input("enter your marks in Maths : "))
 phy = int(input("enter your marks in Physics : "))
 cs = int(input("enter your marks in Computer Science : "))
@@ -13,9 +15,11 @@ chem = int(input("enter your marks in Chemistry : "))
 eng = int(input("Enter your marks in English : "))
 
 # Total marks
+
 total = (mat + phy + cs + chem + eng)
 
-# Percentage 
+# Percentage
+
 percentage = total/mm * 100 
 
 if mm<total:
