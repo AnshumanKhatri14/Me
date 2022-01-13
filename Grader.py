@@ -29,6 +29,7 @@ if mm<total:
 def Grader():
     
     # Gradings
+    
     if percentage>95:
         grade="Your grade is A, \nFEEDBACK : Well done, keep it up!"
 
