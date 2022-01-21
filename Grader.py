@@ -37,7 +37,7 @@ def Grader():
         grade="Your grade is B  \n                    FEEDBACK : Only a little more hardwork is required"
 
     elif percentage<=75 and percentage>60:
-        grade ="Your grade is C \n                   FEEDBACK : Hardwork is required!"
+        grade ="Your grade is C \n                    FEEDBACK : Hardwork is required!"
 
     elif percentage<=60:
         grade="Your grade is D  \n                    FEEDBACK : Serious hardwork is required!"
