@@ -31,23 +31,23 @@ def Grader():
     # Gradings
     
     if percentage>95:
-        grade="Your grade is A, \nFEEDBACK : Well done, keep it up!"
+        grade="Your grade is A  \n                    FEEDBACK : Well done, keep it up!"
 
     elif percentage<=95 and percentage>75:
-        grade="Your grade is B, \nFEEDBACK : Only a little more hardwork is required"
+        grade="Your grade is B  \n                    FEEDBACK : Only a little more hardwork is required"
 
     elif percentage<=75 and percentage>60:
-        grade="Your grade is C, \nFEEDBACK : Hardwork is required!"
+        grade ="Your grade is C \n                   FEEDBACK : Hardwork is required!"
 
     elif percentage<=60:
-        grade="Your grade is D, \nFEEDBACK : Serious hardwork is required!"
+        grade="Your grade is D  \n                    FEEDBACK : Serious hardwork is required!"
         exit()
 
     # Printing outputs
     
     print(" Your total marks scored are : ", total, "out of", mm,
-    "\n Your percentage is : ", percentage, "%",
-    "\n",grade)
+       "\n          Your percentage is : ", percentage, "%",
+       "\n               Your grade is : ", grade)
       
 Grader()
 
