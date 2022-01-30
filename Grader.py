@@ -3,7 +3,18 @@
 
 # input from user for max marks
 
-tm = int(input("Enter the total marks possible in single subject out of 5 : "))
+print('\n--------------Welcome to Grade calculator-------------\n')
+
+tm = 0 
+while True:
+    try:
+        tm = int(input("\nEnter the total marks possible in single subject out of 5 : "))  
+    except ValueError:
+        print("Not an integer!")
+        exit()
+    else:
+        break
+
 mm = tm*5
 
 # input from user for marks scored subjectwise
@@ -41,13 +52,13 @@ def Grader():
 
     elif percentage<=60:
         grade="Your grade is D  \n                    FEEDBACK : Serious hardwork is required!"
-        exit()
+        
 
     # Printing outputs
     
     print(" Your total marks scored are : ", total, "out of", mm,
-       "\n          Your percentage is : ", percentage, "%",
-       "\n               Your grade is : ", grade)
+        "\n          Your percentage is : ", percentage, "%",
+        "\n               Your grade is : ", grade)
       
 Grader()
 
