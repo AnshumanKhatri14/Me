@@ -54,7 +54,7 @@ def main():
         rst()
     
 
-    # Gradings
+# Gradings
     
     if percentage>95:
         grade="Your grade is A  \n                    FEEDBACK : Well done, keep it up!"
@@ -69,7 +69,7 @@ def main():
          grade="Your grade is D  \n                    FEEDBACK : Serious hardwork is required!"
         
 
-    # Printing outputs
+# Printing outputs
     
     print("\n Your total marks scored are : ", total, "out of", mm,
           "\n          Your percentage is : ", percentage, "%",
