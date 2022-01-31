@@ -5,40 +5,55 @@
 
 print('\n--------------Welcome to Grade calculator-------------\n')
 
-tm = 0 
-while True:
-    try:
-        tm = int(input("\nEnter the total marks possible in single subject out of 5 : "))  
-    except ValueError:
-        print("Not an integer!")
+def rst():
+    choice=input("\nPress enter to restart or press 'x' to exit program ---> ")
+    if choice.lower() == 'x':
+        print()
         exit()
+    elif choice == "":
+        main()
     else:
-        break
+        print("\nPlease Enter a valid choice...")
+        rst()
 
-mm = tm*5
+def main():
+    def inpt():
+        inpt.tm = 0 
+        while True:
+            try:
+                inpt.tm = int(input("\nEnter the total marks possible in single subject out of 5 ---> "))  
+            except ValueError:
+                print("\nEnter marks (as whole numbers) to calculate...")
+                main()
+                break
+            else:
+                break
+
+    inpt()
+
+    mm = (inpt.tm)*5
 
 # input from user for marks scored subjectwise
 
-mat = int(input("enter your marks in Maths : "))
-phy = int(input("enter your marks in Physics : "))
-cs = int(input("enter your marks in Computer Science : "))
-chem = int(input("enter your marks in Chemistry : "))
-eng = int(input("Enter your marks in English : "))
-
+    mat = int(input("\nEnter your marks in Maths ---> "))
+    phy = int(input("\nEnter your marks in Physics ---> "))
+    cs = int(input("\nEnter your marks in Computer Science ---> "))
+    chem = int(input("\nEnter your marks in Chemistry ---> "))
+    eng = int(input("\nEnter your marks in English ---> "))
+    
 # Total marks
 
-total = (mat + phy + cs + chem + eng)
+    total = (mat + phy + cs + chem + eng) 
 
 # Percentage
 
-percentage = total/mm * 100 
+    percentage = total/mm * 100 
 
-if mm<total:
-    print("invalid input")
-    exit()
-
-def Grader():
+    if mm<total:
+        print("\nTry again with actual marks scored...")
+        rst()
     
+
     # Gradings
     
     if percentage>95:
@@ -48,19 +63,22 @@ def Grader():
         grade="Your grade is B  \n                    FEEDBACK : Only a little more hardwork is required"
 
     elif percentage<=75 and percentage>60:
-        grade ="Your grade is C \n                    FEEDBACK : Hardwork is required!"
+       grade ="Your grade is C \n                    FEEDBACK : Hardwork is required!"
 
     elif percentage<=60:
-        grade="Your grade is D  \n                    FEEDBACK : Serious hardwork is required!"
+         grade="Your grade is D  \n                    FEEDBACK : Serious hardwork is required!"
         
 
     # Printing outputs
     
-    print(" Your total marks scored are : ", total, "out of", mm,
-        "\n          Your percentage is : ", percentage, "%",
-        "\n               Your grade is : ", grade)
-      
-Grader()
+    print("\n Your total marks scored are : ", total, "out of", mm,
+          "\n          Your percentage is : ", percentage, "%",
+          "\n               Your grade is : ", grade)
+
+    rst()
+
+main()
+
 
 # The End
 
